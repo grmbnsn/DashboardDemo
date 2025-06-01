@@ -14,3 +14,4 @@ ___
 | Version | Date | Comments |
 |---|---|---|
 | 0.0.1 | 2025-05-31 | Set up repo, begin experimenting with Quarto |
+| 0.0.2 | 2025-06-01 | Experimenting with publishing to Pages |
