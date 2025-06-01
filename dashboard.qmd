@@ -26,23 +26,19 @@ df.rename(columns=col_names, inplace=True)
 ## Row {height=70%}
 
 ```{python}
-#| fig-cap: A line chart showing spending by geography over time
 #| title: Annual Per Capita Award Amount
-px.line(df, x='Year', y='Per Capita', color='District')
+fig = px.line(df, x='Year', y='Per Capita', color='District')
+fig.update_layout()
 ```
 
 ## Row {height=50%}
 
 ```{python}
-#| label: fig-bar1
-#| fig-cap: A stacked bar chart showing spending by geography over time
 #| title: Annual Aggregated Award Amount (Stacked)
 px.bar(df, x='Year', y='Aggregated Amount', color='District')
 ```
 
 ```{python}
-#| label: fig-bar2
-#| fig-cap: A grouped bar chart showing spending by geography over time
 #| title: Annual Aggregated Award Amount (Grouped)
 px.bar(df, x='Year', y='Aggregated Amount', color='District', barmode='group')
 ```
