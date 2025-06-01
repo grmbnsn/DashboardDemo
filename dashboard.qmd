@@ -28,7 +28,7 @@ df.rename(columns=col_names, inplace=True)
 ```{python}
 #| fig-cap: A line chart showing spending by geography over time
 #| title: Annual Per Capita Award Amount
-fig = px.line(df, x='Year', y='Per Capita', color='District')
+px.line(df, x='Year', y='Per Capita', color='District')
 ```
 
 ## Row {height=50%}
