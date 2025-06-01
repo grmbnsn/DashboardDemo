@@ -1,16 +1,48 @@
 ---
 title: "Dashboard Demonstration"
+author: "Graeme Benson"
+date: "2025-05-31"
 format:
-  html:
-    code-fold: true
+  dashboard
 jupyter: python3
 ---
 
 ```{python}
-
-
+# Boilerplate
+import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+import plotly.express as px
+```
 
+```{python}
+# Read in data
+df = pd.read_csv('data/spending_by_geography.csv')
 
+# Rename columns
+col_names = {'display_name': 'District', 'aggregated_amount': 'Aggregated Amount', 'population': 'Population', 'per_capita': 'Per Capita', 'year': 'Year'}
+df.rename(columns=col_names, inplace=True)
+```
+
+## Row {height=70%}
+
+```{python}
+#| fig-cap: A line chart showing spending by geography over time
+#| title: Annual Per Capita Award Amount
+fig = px.line(df, x='Year', y='Per Capita', color='District')
+```
+
+## Row {height=50%}
+
+```{python}
+#| label: fig-bar1
+#| fig-cap: A stacked bar chart showing spending by geography over time
+#| title: Annual Aggregated Award Amount (Stacked)
+px.bar(df, x='Year', y='Aggregated Amount', color='District')
+```
+
+```{python}
+#| label: fig-bar2
+#| fig-cap: A grouped bar chart showing spending by geography over time
+#| title: Annual Aggregated Award Amount (Grouped)
+px.bar(df, x='Year', y='Aggregated Amount', color='District', barmode='group')
 ```
