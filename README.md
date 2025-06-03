@@ -6,7 +6,7 @@
 This repository is a demonstration of my ability to develop interactive Quarto dashboards for The Planetary Society.
 
 ## Dashboards
-- [Dashboard Demonstration](http://www.graeme.space/DashboardDemo/dashboard.html)
+- [Dashboard Demonstration](https://www.graeme.space/DashboardDemo/dashboard.html)
 
 ## Data Source:
 [USASpending.gov](https://www.usaspending.gov/)
@@ -20,3 +20,4 @@ ___
 |---|---|---|
 | 0.0.1 | 2025-05-31 | Set up repo, begin experimenting with Quarto |
 | 0.0.2 | 2025-06-01 | Experimenting with publishing to Pages |
+| 0.0.3 | 2025-06-03 | Clean up comments |
